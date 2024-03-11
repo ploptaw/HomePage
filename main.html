@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ユニコードエスケープシーケンス変換</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+
+<body>
+    <button class="home-button" onclick="window.location.href='./index.html'">戻る</button>
+    <div class="dark-mode-container">
+        <span>Darkmode</span>
+        <div class="dark-mode-slider" onclick="toggleDarkMode()"></div>
+    </div>
+    <div class="container">
+        <h1>ユニコードエスケープシーケンス変換</h1>
+        <h2>変換</h2>
+        <label for="input-text">変換したい文字列：</label>
+        <textarea id="input-text"></textarea>
+        <button class="convert-button" onclick="convertToUnicodeEscape()">変換する</button>
+        <div id="output"></div>
+
+        <h2>逆変換</h2>
+        <label for="input-unicode">変換したいユニコードエスケープシーケンス：</label>
+        <textarea id="input-unicode"></textarea>
+        <button class="reverse-button" onclick="convertToNormalText()">逆変換する</button>
+        <div id="output-unicode"></div>
+
+        <h2>§ to & Converter</h2>
+        <label for="section-text">変換したい文字列：</label>
+        <textarea id="section-text"></textarea>
+        <button class="convert-andbutton" onclick="convertsection()">変換する</button>
+        <div id="result"></div>
+
+        <h2>変換履歴</h2>
+        <table class="history-table">
+            <thead>
+                <tr>
+                    <th>文字列 / Unicode</th>
+                    <th>変換結果</th>
+                    <th>操作</th>
+                    <th>日時</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <h2>カラーコード / 装飾コード表</h2>
+        <table class="color-table">
+            <tbody>
+                <tr>
+                    <td>§0</td>
+                    <td>\u00a70</td>
+                    <td class="reset">Reset</td>
+                </tr>
+                <tr>
+                    <td>§1</td>
+                    <td>\u00a71</td>
+                    <td style="color: #0000AA">■</td>
+                </tr>
+                <tr>
+                    <td>§2</td>
+                    <td>\u00a72</td>
+                    <td style="color: #00AA00">■</td>
+                </tr>
+                <tr>
+                    <td>§3</td>
+                    <td>\u00a73</td>
+                    <td style="color: #00AAAA">■</td>
+                </tr>
+                <tr>
+                    <td>§4</td>
+                    <td>\u00a74</td>
+                    <td style="color: #AA0000">■</td>
+                </tr>
+                <tr>
+                    <td>§5</td>
+                    <td>\u00a75</td>
+                    <td style="color: #AA00AA">■</td>
+                </tr>
+                <tr>
+                    <td>§6</td>
+                    <td>\u00a76</td>
+                    <td style="color: #FFAA00">■</td>
+                </tr>
+                <tr>
+                    <td>§7</td>
+                    <td>\u00a77</td>
+                    <td style="color: #AAAAAA">■</td>
+                </tr>
+                <tr>
+                    <td>§8</td>
+                    <td>\u00a78</td>
+                    <td style="color: #555555">■</td>
+                </tr>
+                <tr>
+                    <td>§9</td>
+                    <td>\u00a79</td>
+                    <td style="color: #5555FF">■</td>
+                </tr>
+                <tr>
+                    <td>§a</td>
+                    <td>\u00a7a</td>
+                    <td style="color: #55FF55">■</td>
+                </tr>
+                <tr>
+                    <td>§b</td>
+                    <td>\u00a7b</td>
+                    <td style="color: #55FFFF">■</td>
+                </tr>
+                <tr>
+                    <td>§c</td>
+                    <td>\u00a7c</td>
+                    <td style="color: #FF5555">■</td>
+                </tr>
+                <tr>
+                    <td>§d</td>
+                    <td>\u00a7d</td>
+                    <td style="color: #FF55FF">■</td>
+                </tr>
+                <tr>
+                    <td>§e</td>
+                    <td>\u00a7e</td>
+                    <td style="color: #FFFF55">■</td>
+                </tr>
+                <tr>
+                    <td>§f</td>
+                    <td>\u00a7f</td>
+                    <td style="color: #FFFFFF">■</td>
+                </tr>
+                <tr>
+                    <td>§k</td>
+                    <td>\u00a7k</td>
+                    <td><span class="blink reset">Obfuscated</span></td>
+                </tr>
+                <tr>
+                    <td>§l</td>
+                    <td>\u00a7l</td>
+                    <td><span class="bold reset">Bold</span></td>
+                </tr>
+                <tr>
+                    <td>§m</td>
+                    <td>\u00a7m</td>
+                    <td><span class="strikethrough reset">Strikethrough</span></td>
+                </tr>
+                <tr>
+                    <td>§n</td>
+                    <td>\u00a7n</td>
+                    <td><span class="underline reset">Underline</span></td>
+                </tr>
+                <tr>
+                    <td>§o</td>
+                    <td>\u00a7o</td>
+                    <td><span class="italic reset">Italic</span></td>
+                </tr>
+                <tr>
+                    <td>§r</td>
+                    <td>\u00a7r</td>
+                    <td class="reset">Reset</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <footer>
+        &copy; 2023- ploptaw All Rights Reserved.<br>
+        このウェブサイトに掲載されているすべてのコンテンツは、著作権法によって保護されております。コンテンツの無断転載、複製、再配布等は固く禁止されております。
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
