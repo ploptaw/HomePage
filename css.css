@@ -71,7 +71,7 @@ button {
 }
 
 button:not(.delete, .home-button) {
-    width: 150px;  /* お好みの幅に設定 */
+    width: 200px;  /* お好みの幅に設定 */
     height: 50px;  /* お好みの高さに設定 */
 }
 
