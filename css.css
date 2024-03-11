@@ -115,6 +115,7 @@ table {
     margin-bottom: 2rem;
     border-radius: 10px;
     overflow: hidden;
+    background-color: #eff2f5;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -182,12 +183,7 @@ th {
 .color-table td {
     text-align: center;
     padding: 8px;
-}
-
-.color-table td:nth-child(3) {
-    width: 50px;
-    height: 30px;
-    border-radius: 50%;
+    outline: 1px solid #44444410;
 }
 
 footer {
@@ -313,6 +309,16 @@ body.dark-mode h2 {
 body.dark-mode .card {
     background-color: #333;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .color-table td {
+    background-color: #444;
+    color: #f2f2f2;
+    outline: 1px solid #dddddd10;
+}
+
+body.dark-mode .reset {
+    color: #f2f2f2;
 }
 
 /* ダークモードスライダー */
