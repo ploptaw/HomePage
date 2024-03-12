@@ -1,0 +1,91 @@
+
+button {
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 10px 0;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+button:not(.delete, .home-button) {
+    width: 200px;  /* お好みの幅に設定 */
+    height: 50px;  /* お好みの高さに設定 */
+}
+
+.convert-button {
+    background-color: #6c63ff;
+}
+
+.reverse-button {
+    background-color: #ff6b6b;
+}
+
+.convert-andbutton {
+    background-color: #9acd32;
+}
+
+
+.copy-button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.copy-button:hover {
+    background-color: #45a049;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.delete-button {
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+    background-color: #e53935;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.history-table th:nth-child(1),
+.history-table td:nth-child(1) {
+    width: 25%;
+}
+
+.history-table th:nth-child(2),
+.history-table td:nth-child(2) {
+    width: 35%;
+}
+
+.history-table th:nth-child(3),
+.history-table td:nth-child(3) {
+    width: 15%;
+}
+
+.history-table th:nth-child(4),
+.history-table td:nth-child(4) {
+    width: 25%;
+}
+
+/* ダークモード */
+body.dark-mode .history-table tr {
+    background-color: #444;
+    color: #f2f2f2;
+}
