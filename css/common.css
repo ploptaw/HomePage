@@ -17,7 +17,7 @@ body {
 }
 
 .container {
-    background-color: #fff;
+    background-color: #fafafa;
     border-radius: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     padding: 30px;
@@ -80,6 +80,8 @@ button {
     left: 60px;
     margin: 10px 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 150px;
+    height: 40px;
 }
 
 button:hover {
@@ -188,12 +190,12 @@ body.dark-mode h2 {
 }
 
 body.dark-mode .dark-mode-slider {
-    background-color: #666;
+    background-color: #49481d;
 }
 
 body.dark-mode .dark-mode-slider:before {
     transform: translateX(25px);
-    background-color: #333333;
+    background-color: #cecc53;
 }
 
 body.dark-mode .dark-mode-container {
