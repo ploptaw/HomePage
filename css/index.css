@@ -12,6 +12,9 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .card h2 {
@@ -31,6 +34,7 @@
     padding: 10px 20px;
     border-radius: 20px;
     transition: background-color 0.3s ease;
+    align-self: flex-end;
 }
 
 .btn:hover {
