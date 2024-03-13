@@ -1,0 +1,29 @@
+.timer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.timer-display {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.timer-controls button {
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 10px 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 200px;
+    height: 50px;
+}
+
+.timer-settings {
+    padding: 15px;
+    margin: 10px 20px;
+}
