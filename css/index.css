@@ -13,6 +13,13 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    border: #5a50e5;
 }
 
 .card h2 {
@@ -39,8 +46,8 @@
     background-color: #5a50e5;
 }
 
-
+/* ダークモード */
 body.dark-mode .card {
-    background-color: #333;
+    background-color: #383838;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
