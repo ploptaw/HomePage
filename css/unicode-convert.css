@@ -16,20 +16,31 @@ button:not(.delete, .home-button) {
 }
 
 .convert-button {
-    background-color: #6c63ff;
+    background-color: #9281dd;
+}
+
+.convert-button:hover {
+    background-color: #7567b3;
 }
 
 .reverse-button {
-    background-color: #ff6b6b;
+    background-color: #7a64dd;
+}
+
+.reverse-button:hover {
+    background-color: #6250b4;
 }
 
 .convert-andbutton {
-    background-color: #9acd32;
+    background-color: #664bdd;
 }
 
+.convert-andbutton:hover {
+    background-color: #543eb4;
+}
 
 .copy-button {
-    background-color: #4caf50;
+    background-color: #897c8f;
     color: #fff;
     border: none;
     border-radius: 20px;
@@ -39,12 +50,12 @@ button:not(.delete, .home-button) {
 }
 
 .copy-button:hover {
-    background-color: #45a049;
+    background-color: #58505c;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .delete-button {
-    background-color: #f44336;
+    background-color: #463f59;
     color: #fff;
     border: none;
     border-radius: 20px;
