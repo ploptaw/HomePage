@@ -1,0 +1,28 @@
+.char-count {
+    margin-top: 2rem;
+}
+
+.count-results {
+    margin-top: 1rem;
+}
+
+.count-results p {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+#count-unique {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.count-results {
+    background-color: #555;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Count</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/count.css">
+</head>
+<body>
+    <button class="home-button" onclick="window.location.href='index.html'">戻る</button>
+    <div class="dark-mode-container">
+        <span>Darkmode</span>
+        <div class="dark-mode-slider" onclick="toggleDarkMode()"></div>
+    </div>
+    <div class="container">
+        <h1>Character Count</h1>
+        <div class="char-count">
+            <label for="text-input">Enter text:</label>
+            <textarea id="text-input"></textarea>
+            <div class="target-count"><br>
+                <label for="target-input">目標:</label>
+                <input type="number" id="target-input" value="0" min="0" max="10000">
+            </div>
+            <br>
+            <div class="count-results">
+                <p id="total-count">総文字数: <span id="count-total">0</span></p>
+                <p>空白を除いた文字数: <span id="count-no-spaces">0</span></p>
+                <p>改行を除いた文字数: <span id="count-no-newlines">0</span></p>
+                <p>改行と空白を除いた文字数: <span id="count-no-spaces-newlines">0</span></p>
+                <p>目標までの文字数: <span id="remaining-count">0</span></p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        &copy; 2024- ploptaw<br>
+    </footer>
+    <script src="script/count.js"></script>
+    <script src="script/common.js"></script>
+</body>
+</html>
