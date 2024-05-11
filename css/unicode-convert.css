@@ -75,6 +75,11 @@ th {
     font-weight: bold;
 }
 
+.history-table {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
 .history-table th:nth-child(1),
 .history-table td:nth-child(1) {
     width: 25%;
